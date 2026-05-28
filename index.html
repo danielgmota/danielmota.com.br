@@ -158,14 +158,15 @@
             <div class="project-content">
               <div class="project-tags">
                 <span class="tech-badge">Fórmula 1</span>
-                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">Vite</span>
+                <span class="tech-badge">Supabase</span>
                 <span class="tech-badge">TailwindCSS</span>
                 <span class="tech-badge">TypeScript</span>
                 <span class="tech-badge">Vercel</span>
               </div>
               <h3 class="project-title">F1 Palpites</h3>
               <p class="project-description">
-                Plataforma moderna e interativa de palpites de Fórmula 1 desenvolvida com Next.js e TypeScript. Usuários podem criar palpites de Qualifying, Race (P1 ao P10) e Volta Mais Rápida, além de disputar em ligas e visualizar estatísticas dos pilotos em tempo real.
+                Plataforma moderna e interativa de palpites de Fórmula 1 desenvolvida com Vite, Supabase e TypeScript. Usuários podem criar palpites de Qualifying, Race (P1 ao P10) e Volta Mais Rápida, além de disputar em ligas e visualizar estatísticas dos pilotos em tempo real.
               </p>
               <div class="project-links">
                 <a href="https://f1palpites.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 1.75rem;">
@@ -175,31 +176,21 @@
               </div>
             </div>
             
-            <div class="project-preview">
-              <div class="project-preview-mockup">
-                <div class="mockup-header">
-                  <span class="mockup-dot red"></span>
-                  <span class="mockup-dot yellow"></span>
-                  <span class="mockup-dot green"></span>
-                  <span class="mockup-url" style="margin-left: auto; margin-right: auto; font-size: 10px; color: var(--text-muted); font-family: var(--font-mono); margin-top: 0;">f1palpites.com.br</span>
+            <div class="project-preview" style="aspect-ratio: auto; min-height: 480px; background: none; border: none;">
+              <div class="phone-mockup" style="width: 260px; height: 480px; border: 10px solid #1c1c28; border-radius: 36px; background: #080810; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 99, 235, 0.15); position: relative; display: flex; flex-direction: column; margin-inline: auto;">
+                <!-- Notch -->
+                <div style="width: 120px; height: 18px; background: #1c1c28; position: absolute; top: 0; left: 50%; transform: translateX(-50%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 10; display: flex; justify-content: center; align-items: center;">
+                  <div style="width: 40px; height: 3px; background: #0c0c14; border-radius: 2px;"></div>
                 </div>
-                <div class="mockup-body">
-                  <div class="f1-mockup-content" style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; width: 100%;">
-                    <div style="font-size: 1.5rem; color: var(--accent-neon); text-shadow: 0 0 10px rgba(0, 212, 255, 0.4); font-weight: 800; letter-spacing: 0.05em; font-family: var(--font-sans);">F1 PALPITES</div>
-                    <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: center;">
-                      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 0.5rem; border-radius: 6px; flex: 1; text-align: center;">
-                        <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase;">Qualifying</div>
-                        <div style="font-size: 11px; font-weight: bold; color: var(--accent-blue-light); margin-top: 2px;">POLE POSITION</div>
-                      </div>
-                      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 0.5rem; border-radius: 6px; flex: 1; text-align: center;">
-                        <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase;">Race Day</div>
-                        <div style="font-size: 11px; font-weight: bold; color: var(--accent-neon); margin-top: 2px;">P1, P2, P3 & FL</div>
-                      </div>
-                    </div>
-                    <div style="background: rgba(0, 212, 255, 0.05); border: 1px dashed rgba(0, 212, 255, 0.2); padding: 0.5rem; border-radius: 6px; font-size: 9px; width: 85%; color: var(--text-secondary); text-align: center; font-family: var(--font-mono);">
-                      status: 🟢 TEMPORADA ATIVA
-                    </div>
-                  </div>
+                <!-- Screen -->
+                <div style="flex: 1; overflow-y: auto; border-radius: 26px; display: flex; align-items: flex-start; padding-top: 10px; background: #0c0c14; scrollbar-width: none;">
+                  <style>
+                    /* Hide scrollbar for Chrome, Safari and Opera */
+                    .phone-mockup ::-webkit-scrollbar {
+                      display: none;
+                    }
+                  </style>
+                  <img src="assets/img/f1palpites.png" alt="F1 Palpites Mobile View" style="width: 100%; height: auto; display: block;">
                 </div>
               </div>
             </div>
