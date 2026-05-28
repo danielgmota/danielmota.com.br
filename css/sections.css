@@ -29,14 +29,47 @@
 
 .navbar-logo {
   font-weight: 800;
-  font-size: 1.85rem;
-  letter-spacing: -0.01em;
+  font-size: 1.75rem;
+  letter-spacing: -0.02em;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  color: #000000;
-  -webkit-text-stroke: 1px var(--accent-blue-light);
-  text-stroke: 1px var(--accent-blue-light);
+  gap: 0.4rem;
+  color: #ffffff;
+  transition: transform 0.3s var(--ease-out-expo), letter-spacing 0.3s var(--ease-out-expo);
+}
+
+.navbar-logo:hover {
+  transform: scale(1.02);
+  letter-spacing: 0.01em;
+}
+
+.logo-mark {
+  color: var(--accent-neon);
+  font-family: var(--font-mono);
+  font-weight: 700;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.6);
+  animation: logo-mark-pulse 2s infinite alternate ease-in-out;
+}
+
+.logo-accent {
+  background: linear-gradient(135deg var(--in-oklch), var(--accent-blue-light) 0%, var(--accent-neon) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.25));
+  font-weight: 900;
+}
+
+@keyframes logo-mark-pulse {
+  0% {
+    text-shadow: 0 0 4px rgba(0, 212, 255, 0.4);
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 12px rgba(0, 212, 255, 0.8), 0 0 20px rgba(37, 99, 235, 0.3);
+    opacity: 1;
+  }
 }
 
 .navbar-menu {
