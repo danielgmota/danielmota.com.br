@@ -291,40 +291,112 @@
   padding: 2rem 1rem;
 }
 
-/* Habilidades Section */
-.skills-grid {
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+/* Projetos Section */
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 
-.skill-card {
+.project-card {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  padding: 2.5rem;
+}
+
+@media (min-width: 992px) {
+  .project-card {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+  }
+}
+
+.project-content {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+  z-index: 2;
 }
 
-.skill-icon-box {
-  width: 48px;
-  height: 48px;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-title {
+  font-size: 1.75rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.project-description {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.project-links {
+  margin-top: 0.5rem;
+}
+
+.project-preview {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 2;
   border-radius: 12px;
-  background-color: rgba(37, 99, 235, 0.08);
-  border: 1px solid rgba(37, 99, 235, 0.15);
+  overflow: hidden;
+  border: 1px solid var(--border-subtle);
+  aspect-ratio: 16/10;
+  background: radial-gradient(circle at center, rgba(37, 99, 235, 0.08) 0%, transparent 70%);
+  width: 100%;
+}
+
+.project-preview-mockup {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.mockup-header {
+  height: 28px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid var(--border-subtle);
   display: flex;
   align-items: center;
+  padding: 0 10px;
+  gap: 6px;
+}
+
+.mockup-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.mockup-dot.red { background: #ff5f56; }
+.mockup-dot.yellow { background: #ffbd2e; }
+.mockup-dot.green { background: #27c93f; }
+
+.mockup-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  color: var(--accent-neon);
-  font-size: 1.5rem;
-}
-
-.skill-card h3 {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.skill-card p {
-  color: var(--text-secondary);
-  font-size: 0.95rem;
-  line-height: 1.5;
+  align-items: center;
+  background: linear-gradient(135deg, #0d0d15, #040408);
+  padding: 1.5rem;
 }
 
 /* Stack Section */

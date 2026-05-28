@@ -57,7 +57,7 @@
       <nav class="navbar-menu" id="nav-menu" aria-label="Navegação Principal">
         <a href="#hero" class="navbar-link active" id="link-hero">Início</a>
         <a href="#sobre-mim" class="navbar-link" id="link-sobre">Sobre mim</a>
-        <a href="#habilidades" class="navbar-link" id="link-habilidades">Habilidades</a>
+        <a href="#projetos" class="navbar-link" id="link-projetos">Projetos</a>
         <a href="#stack" class="navbar-link" id="link-stack">Stack</a>
         <a href="#experiencia" class="navbar-link" id="link-experiencia">Experiência</a>
         <a href="#servicos" class="navbar-link" id="link-servicos">Serviços</a>
@@ -144,78 +144,65 @@
       </div>
     </section>
 
-    <!-- 3. Principais Habilidades Section -->
-    <section id="habilidades" class="section-padding">
+    <!-- 3. Projetos Section -->
+    <section id="projetos" class="section-padding">
       <div class="container">
         <div class="section-header reveal">
-          <span class="subtitle">Competências</span>
-          <h2>Principais Habilidades</h2>
-          <p>Destaques do meu perfil de engenharia técnica voltada para front-end moderno.</p>
+          <span class="subtitle">Portfólio</span>
+          <h2>Projetos</h2>
+          <p>Trabalhos e plataformas digitais de destaque construídas recentemente.</p>
         </div>
-        <div class="grid skills-grid">
-          <!-- Card 1 -->
-          <div class="card skill-card reveal reveal-delay-1" id="skill-react-ts">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon><line x1="12" y1="22" x2="12" y2="15.5"></line><line x1="22" y1="8.5" x2="12" y2="15.5"></line><line x1="2" y1="8.5" x2="12" y2="15.5"></line><line x1="12" y1="2" x2="12" y2="8.5"></line><line x1="2" y1="15.5" x2="12" y2="8.5"></line><line x1="22" y1="15.5" x2="12" y2="8.5"></line></svg>
+        <div class="projects-container">
+          <!-- Projeto 1: F1 Palpites -->
+          <div class="card project-card reveal" id="project-f1palpites">
+            <div class="project-content">
+              <div class="project-tags">
+                <span class="tech-badge">Fórmula 1</span>
+                <span class="tech-badge">Next.js</span>
+                <span class="tech-badge">TailwindCSS</span>
+                <span class="tech-badge">TypeScript</span>
+                <span class="tech-badge">Vercel</span>
+              </div>
+              <h3 class="project-title">F1 Palpites</h3>
+              <p class="project-description">
+                Plataforma moderna e interativa de palpites de Fórmula 1 desenvolvida com Next.js e TypeScript. Usuários podem criar palpites de Qualifying, Race (P1 ao P10) e Volta Mais Rápida, além de disputar em ligas e visualizar estatísticas dos pilotos em tempo real.
+              </p>
+              <div class="project-links">
+                <a href="https://f1palpites.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 1.75rem;">
+                  Acessar F1 Palpites
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                </a>
+              </div>
             </div>
-            <h3>React & TypeScript</h3>
-            <p>Construção de aplicações robustas com tipagem estática segura, custom hooks complexos e gerenciamento de estado previsível.</p>
-          </div>
-          <!-- Card 2 -->
-          <div class="card skill-card reveal reveal-delay-2" id="skill-arquitetura">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9"></rect><rect x="14" y="3" width="7" height="5"></rect><rect x="14" y="12" width="7" height="9"></rect><rect x="3" y="16" width="7" height="5"></rect></svg>
+            
+            <div class="project-preview">
+              <div class="project-preview-mockup">
+                <div class="mockup-header">
+                  <span class="mockup-dot red"></span>
+                  <span class="mockup-dot yellow"></span>
+                  <span class="mockup-dot green"></span>
+                  <span class="mockup-url" style="margin-left: auto; margin-right: auto; font-size: 10px; color: var(--text-muted); font-family: var(--font-mono); margin-top: 0;">f1palpites.com.br</span>
+                </div>
+                <div class="mockup-body">
+                  <div class="f1-mockup-content" style="display: flex; flex-direction: column; align-items: center; gap: 0.75rem; width: 100%;">
+                    <div style="font-size: 1.5rem; color: var(--accent-neon); text-shadow: 0 0 10px rgba(0, 212, 255, 0.4); font-weight: 800; letter-spacing: 0.05em; font-family: var(--font-sans);">F1 PALPITES</div>
+                    <div style="display: flex; gap: 0.5rem; width: 100%; justify-content: center;">
+                      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 0.5rem; border-radius: 6px; flex: 1; text-align: center;">
+                        <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase;">Qualifying</div>
+                        <div style="font-size: 11px; font-weight: bold; color: var(--accent-blue-light); margin-top: 2px;">POLE POSITION</div>
+                      </div>
+                      <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-subtle); padding: 0.5rem; border-radius: 6px; flex: 1; text-align: center;">
+                        <div style="font-size: 8px; color: var(--text-muted); text-transform: uppercase;">Race Day</div>
+                        <div style="font-size: 11px; font-weight: bold; color: var(--accent-neon); margin-top: 2px;">P1, P2, P3 & FL</div>
+                      </div>
+                    </div>
+                    <div style="background: rgba(0, 212, 255, 0.05); border: 1px dashed rgba(0, 212, 255, 0.2); padding: 0.5rem; border-radius: 6px; font-size: 9px; width: 85%; color: var(--text-secondary); text-align: center; font-family: var(--font-mono);">
+                      status: 🟢 TEMPORADA ATIVA
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3>Arquitetura Front-end</h3>
-            <p>Modelagem de projetos com separação clara de responsabilidades, clean code, padrões de pastas escaláveis e modulares.</p>
-          </div>
-          <!-- Card 3 -->
-          <div class="card skill-card reveal reveal-delay-3" id="skill-uiux">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
-            </div>
-            <h3>UI/UX & Responsividade</h3>
-            <p>Refinamento visual premium pixel-perfect que se adapta harmoniosamente a smartphones, tablets e displays ultrawide.</p>
-          </div>
-          <!-- Card 4 -->
-          <div class="card skill-card reveal reveal-delay-4" id="skill-api">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-            </div>
-            <h3>Integração com APIs</h3>
-            <p>Comunicação assíncrona robusta com APIs RESTful/GraphQL, tratamento eficiente de erros, cache e otimização de requisições.</p>
-          </div>
-          <!-- Card 5 -->
-          <div class="card skill-card reveal reveal-delay-1" id="skill-performance">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-            </div>
-            <h3>Performance Web</h3>
-            <p>Otimização de Core Web Vitals (LCP, INP, CLS), code-splitting, lazy loading avançado e minimização do bundle size.</p>
-          </div>
-          <!-- Card 6 -->
-          <div class="card skill-card reveal reveal-delay-2" id="skill-componentizacao">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
-            </div>
-            <h3>Componentização</h3>
-            <p>Desenvolvimento de componentes isolados altamente reutilizáveis, com estados encapsulados e extensíveis.</p>
-          </div>
-          <!-- Card 7 -->
-          <div class="card skill-card reveal reveal-delay-3" id="skill-git">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="18" r="3"></circle><circle cx="6" cy="6" r="3"></circle><circle cx="6" cy="18" r="3"></circle><path d="M18 15V9a4 4 0 0 0-4-4H9"></path><line x1="6" y1="9" x2="6" y2="15"></line></svg>
-            </div>
-            <h3>Git & Versionamento</h3>
-            <p>Domínio de fluxos Git complexos (Git Flow, rebasing, pull requests) e colaboração integrada com integração contínua.</p>
-          </div>
-          <!-- Card 8 -->
-          <div class="card skill-card reveal reveal-delay-4" id="skill-fullstack">
-            <div class="skill-icon-box">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"></ellipse><path d="M3 5v6c0 1.66 4 3 9 3s9-1.34 9-3V5"></path><path d="M3 11v6c0 1.66 4 3 9 3s9-1.34 9-3v-6"></path></svg>
-            </div>
-            <h3>Desenvolvimento Full Stack</h3>
-            <p>Conhecimentos em back-end, banco de dados relacional e construção de APIs básicas para suporte à integração.</p>
           </div>
         </div>
       </div>
