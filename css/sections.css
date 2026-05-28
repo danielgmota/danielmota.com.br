@@ -29,19 +29,14 @@
 
 .navbar-logo {
   font-weight: 800;
-  font-size: 1.25rem;
-  letter-spacing: -0.03em;
+  font-size: 1.85rem;
+  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
   gap: 0.5rem;
-}
-
-.navbar-logo span {
-  width: 10px;
-  height: 10px;
-  background-color: var(--accent-neon);
-  border-radius: 50%;
-  box-shadow: 0 0 8px var(--accent-neon);
+  color: #000000;
+  -webkit-text-stroke: 1px var(--accent-blue-light);
+  text-stroke: 1px var(--accent-blue-light);
 }
 
 .navbar-menu {
