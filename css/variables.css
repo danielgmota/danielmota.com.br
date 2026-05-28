@@ -1,0 +1,46 @@
+:root {
+  /* Font Families */
+  --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-mono: 'JetBrains Mono', Fira Code, monospace;
+
+  /* Color Palette (Dark Theme Premium) */
+  --bg-primary: #030303;      /* Deep black */
+  --bg-secondary: #0a0a0f;    /* Very dark gray-blue */
+  --bg-card: #12121e;         /* Slate dark grey for cards */
+  --bg-card-hover: #161629;   /* Slightly lighter on hover */
+  
+  --border-subtle: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(59, 130, 246, 0.25);
+  --border-glow-hover: rgba(0, 212, 255, 0.4);
+
+  /* Brand Colors */
+  --accent-blue: #2563eb;       /* Royal Blue */
+  --accent-blue-light: #60a5fa; /* Light Blue */
+  --accent-neon: #00d4ff;       /* Tech Cyan/Neon */
+  --accent-indigo: #4f46e5;     /* Deep indigo background accent */
+
+  /* Text Colors */
+  --text-primary: #f8fafc;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+
+  /* Transitions & Animation Timings */
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-cubic: cubic-bezier(0.65, 0, 0.35, 1);
+  --transition-fast: 0.2s var(--ease-out-expo);
+  --transition-normal: 0.4s var(--ease-out-expo);
+  --transition-slow: 0.8s var(--ease-out-expo);
+
+  /* Layout Variables */
+  --container-max-width: 1200px;
+  --header-height: 80px;
+
+  /* Interpolation spaces helper for gradients */
+  --in-oklch: ;
+}
+
+@supports (linear-gradient(in oklch, white, black)) {
+  :root {
+    --in-oklch: in oklch;
+  }
+}

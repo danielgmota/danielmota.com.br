@@ -1,0 +1,172 @@
+/* Entry Animations (Hero Section) */
+.hero-content > * {
+  animation: hero-fade-in 0.8s var(--ease-out-expo) forwards;
+  opacity: 0;
+}
+
+.hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+.hero-content > *:nth-child(2) { animation-delay: 0.2s; }
+.hero-content > *:nth-child(3) { animation-delay: 0.3s; }
+.hero-content > *:nth-child(4) { animation-delay: 0.4s; }
+.hero-content > *:nth-child(5) { animation-delay: 0.5s; }
+
+.hero-image-container {
+  animation: hero-image-fade 1.2s var(--ease-out-expo) forwards;
+  opacity: 0;
+}
+
+@keyframes hero-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes hero-image-fade {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* Scroll reveal animations (triggered via class addition in JS) */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.reveal.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger animations for grid elements */
+.reveal-stagger {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  will-change: opacity, transform;
+}
+
+.reveal-stagger.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Custom delay utility for staggered children */
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* Typing Cursor Pulse Effect */
+.typing-cursor::after {
+  content: "|";
+  color: var(--accent-neon);
+  animation: cursor-blink 1s infinite step-end;
+  margin-left: 2px;
+  font-weight: 400;
+}
+
+@keyframes cursor-blink {
+  from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Background floating glow effect */
+.glow-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.3;
+  z-index: -1;
+  pointer-events: none;
+  mix-blend-mode: screen;
+  animation: float-glow 20s infinite alternate ease-in-out;
+}
+
+@keyframes float-glow {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    transform: translate(80px, 40px) scale(1.1);
+  }
+}
+
+/* Scroll-Driven Animations (Modern browser progressive enhancement) */
+@supports ((animation-timeline: scroll()) and (animation-range: 0% 100%)) {
+  /* Line timeline growth */
+  .timeline::before {
+    animation: grow-line linear both;
+    animation-timeline: view(block);
+    animation-range: entry 10% exit 80%;
+  }
+
+  @keyframes grow-line {
+    from {
+      height: 0%;
+    }
+    to {
+      height: 100%;
+    }
+  }
+
+  /* Fade in timeline cards on entry */
+  .timeline-item {
+    animation: fade-timeline-item linear both;
+    animation-timeline: view(block);
+    animation-range: entry 5% cover 30%;
+  }
+
+  @keyframes fade-timeline-item {
+    from {
+      opacity: 0.2;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .reveal, .reveal-stagger {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+  
+  .hero-content > *, .hero-image-container {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  
+  .timeline-item {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

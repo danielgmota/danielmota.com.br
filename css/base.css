@@ -1,0 +1,91 @@
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Background glowing effect shapes */
+body::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  height: 1000px;
+  background: radial-gradient(circle at top, rgba(37, 99, 235, 0.08) 0%, rgba(79, 70, 229, 0.03) 40%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Global container styling */
+.container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+/* Typography styles */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw + 1rem, 3rem);
+  letter-spacing: -0.02em;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw + 0.75rem, 1.75rem);
+  letter-spacing: -0.01em;
+}
+
+/* Focus outline modern replacement */
+*:focus-visible {
+  outline: 2px solid var(--accent-neon);
+  outline-offset: 4px;
+}
+
+/* Text utility classes */
+.text-gradient {
+  background: linear-gradient(135deg var(--in-oklch), var(--accent-blue-light) 0%, var(--accent-neon) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+}
+
+.text-accent {
+  color: var(--accent-neon);
+}
+
+.text-muted {
+  color: var(--text-secondary);
+}
+
+.mono {
+  font-family: var(--font-mono);
+}
+
+/* Grid & Layout utilities */
+.grid {
+  display: grid;
+  gap: 2rem;
+}
+
+.section-padding {
+  padding-block: 7rem;
+}
+
+@media (max-width: 768px) {
+  .section-padding {
+    padding-block: 4.5rem;
+  }
+}
