@@ -349,7 +349,7 @@
 .stack-card svg {
   width: 40px;
   height: 40px;
-  fill: var(--text-secondary);
+  fill: #ffffff;
   transition: fill 0.3s var(--ease-out-expo), transform 0.3s var(--ease-out-expo);
 }
 
