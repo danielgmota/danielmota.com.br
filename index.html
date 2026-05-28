@@ -150,14 +150,13 @@
         <div class="section-header reveal">
           <span class="subtitle">Portfólio</span>
           <h2>Projetos</h2>
-          <p>Trabalhos e plataformas digitais de destaque construídas recentemente.</p>
+          <p>Projetos pessoais e públicos, que podem ser compartilháveis</p>
         </div>
         <div class="projects-container">
           <!-- Projeto 1: F1 Palpites -->
           <div class="card project-card reveal" id="project-f1palpites">
             <div class="project-content">
               <div class="project-tags">
-                <span class="tech-badge">Fórmula 1</span>
                 <span class="tech-badge">Vite</span>
                 <span class="tech-badge">Supabase</span>
                 <span class="tech-badge">TailwindCSS</span>
@@ -166,7 +165,7 @@
               </div>
               <h3 class="project-title">F1 Palpites</h3>
               <p class="project-description">
-                Plataforma moderna e interativa de palpites de Fórmula 1 desenvolvida com Vite, Supabase e TypeScript. Usuários podem criar palpites de Qualifying, Race (P1 ao P10) e Volta Mais Rápida, além de disputar em ligas e visualizar estatísticas dos pilotos em tempo real.
+                <strong>F1 Palpites</strong> is a Formula 1 prediction web app: users pick qualifying, race, fastest-lap, and driver-of-the-day outcomes before each GP and earn points. Rankings span groups and geographic contexts (world, country, state). Social features include per-group comments per race, notifications, group invites, and discoverable public groups. Groups can be public (open join), private (invite-only), or system groups (state/country auto-membership).
               </p>
               <div class="project-links">
                 <a href="https://f1palpites.com.br" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="padding: 0.75rem 1.75rem;">
@@ -176,21 +175,36 @@
               </div>
             </div>
             
-            <div class="project-preview" style="aspect-ratio: auto; min-height: 480px; background: none; border: none;">
-              <div class="phone-mockup" style="width: 260px; height: 480px; border: 10px solid #1c1c28; border-radius: 36px; background: #080810; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 99, 235, 0.15); position: relative; display: flex; flex-direction: column; margin-inline: auto;">
-                <!-- Notch -->
-                <div style="width: 120px; height: 18px; background: #1c1c28; position: absolute; top: 0; left: 50%; transform: translateX(-50%); border-bottom-left-radius: 12px; border-bottom-right-radius: 12px; z-index: 10; display: flex; justify-content: center; align-items: center;">
-                  <div style="width: 40px; height: 3px; background: #0c0c14; border-radius: 2px;"></div>
+            <div class="project-preview" style="aspect-ratio: auto; min-height: 400px; background: none; border: none; overflow: visible; display: flex; justify-content: center; align-items: center; width: 100%;">
+              <div class="device-stack" style="position: relative; width: 100%; max-width: 500px; aspect-ratio: 4/3; margin: 0 auto;">
+                <!-- Desktop Mockup -->
+                <div class="desktop-mockup" style="width: 75%; aspect-ratio: 16/10; border: 1px solid var(--border-subtle); border-radius: 8px; background: #030303; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7); display: flex; flex-direction: column; position: absolute; left: 0; top: 15%; z-index: 1;">
+                  <div class="mockup-header" style="height: 20px; background: rgba(255,255,255,0.03); border-bottom: 1px solid var(--border-subtle); display: flex; align-items: center; padding: 0 6px; gap: 3px;">
+                    <span class="mockup-dot red" style="width: 5px; height: 5px; border-radius: 50%; background: #ff5f56;"></span>
+                    <span class="mockup-dot yellow" style="width: 5px; height: 5px; border-radius: 50%; background: #ffbd2e;"></span>
+                    <span class="mockup-dot green" style="width: 5px; height: 5px; border-radius: 50%; background: #27c93f;"></span>
+                    <span class="mockup-url" style="margin-left: auto; margin-right: auto; font-size: 8px; color: var(--text-muted); font-family: var(--font-mono);">f1palpites.com.br</span>
+                  </div>
+                  <div style="flex: 1; overflow: hidden; background: #0d0d15;">
+                    <img src="assets/img/f1palpites_desktop.png" alt="F1 Palpites Desktop View" style="width: 100%; height: 100%; object-fit: cover; object-position: top; display: block;">
+                  </div>
                 </div>
-                <!-- Screen -->
-                <div style="flex: 1; overflow-y: auto; border-radius: 26px; display: flex; align-items: flex-start; padding-top: 10px; background: #0c0c14; scrollbar-width: none;">
-                  <style>
-                    /* Hide scrollbar for Chrome, Safari and Opera */
-                    .phone-mockup ::-webkit-scrollbar {
-                      display: none;
-                    }
-                  </style>
-                  <img src="assets/img/f1palpites.png" alt="F1 Palpites Mobile View" style="width: 100%; height: auto; display: block;">
+                
+                <!-- Mobile Mockup -->
+                <div class="phone-mockup" style="width: 35%; aspect-ratio: 9/19.5; border: 5px solid #1c1c28; border-radius: 20px; background: #080810; overflow: hidden; box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 20px rgba(37, 99, 235, 0.15); position: absolute; right: 0; bottom: 10%; z-index: 2; display: flex; flex-direction: column;">
+                  <!-- Notch -->
+                  <div style="width: 50%; height: 10px; background: #1c1c28; position: absolute; top: 0; left: 50%; transform: translateX(-50%); border-bottom-left-radius: 6px; border-bottom-right-radius: 6px; z-index: 10; display: flex; justify-content: center; align-items: center;">
+                    <div style="width: 20px; height: 2px; background: #0c0c14; border-radius: 1px;"></div>
+                  </div>
+                  <!-- Screen -->
+                  <div style="flex: 1; overflow-y: auto; border-radius: 15px; display: flex; align-items: flex-start; padding-top: 4px; background: #0c0c14; scrollbar-width: none;">
+                    <style>
+                      .phone-mockup ::-webkit-scrollbar {
+                        display: none;
+                      }
+                    </style>
+                    <img src="assets/img/f1palpites.png" alt="F1 Palpites Mobile View" style="width: 100%; height: auto; display: block;">
+                  </div>
                 </div>
               </div>
             </div>
