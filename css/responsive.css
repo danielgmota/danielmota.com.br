@@ -25,6 +25,18 @@
     display: block;
   }
 
+  /* Language Switcher mobile adjustments */
+  .lang-btn {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    justify-content: center;
+  }
+
+  .lang-btn .lang-arrow {
+    display: none;
+  }
+
   .navbar-menu {
     position: fixed;
     top: 0;
@@ -67,6 +79,12 @@
   }
 
   /* Hero Section Mobile */
+  .hero-section {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 2rem;
+  }
+
   .hero-grid {
     grid-template-columns: 1fr;
     text-align: center;
@@ -94,6 +112,15 @@
 
   .hero-actions .btn {
     width: 100%;
+  }
+
+  /* Scroll indicator on mobile */
+  .scroll-indicator {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
+    margin-top: 3rem;
   }
 
   /* About Section Mobile */
