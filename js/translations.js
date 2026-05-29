@@ -20,8 +20,7 @@ const translations = {
     
     // hero
     "hero-tag": "Desenvolvimento Web e Mobile",
-    "hero-title": "Daniel Mota",
-    "hero-subtitle": "<span class=\"text-gradient\">Freelancer</span> web e mobile",
+    "hero-title": "<span class=\"text-gradient\">Freelancer</span> web e mobile",
     "hero-description": "Criação de sistemas corporativos e aplicativos móveis de alta performance com foco em escalabilidade.<br>Ofereço consultoria em arquitetura web, modernização de portais legados e desenvolvimento de Design Systems.",
     "hero-cta-about": "Sobre mim",
     "hero-cta-contact": "Entre em contato",
@@ -141,8 +140,7 @@ const translations = {
     
     // hero
     "hero-tag": "Web and Mobile Development",
-    "hero-title": "Daniel Mota",
-    "hero-subtitle": "<span class=\"text-gradient\">Web and mobile</span> freelancer",
+    "hero-title": "<span class=\"text-gradient\">Web and mobile</span> freelancer",
     "hero-description": "Creation of high-performance corporate systems and mobile applications with a focus on scalability.<br>I offer web architecture consulting, legacy portal modernization, and Design Systems development.",
     "hero-cta-about": "About me",
     "hero-cta-contact": "Get in touch",
@@ -262,8 +260,7 @@ const translations = {
     
     // hero
     "hero-tag": "Desarrollo Web y Móvil",
-    "hero-title": "Daniel Mota",
-    "hero-subtitle": "<span class=\"text-gradient\">Freelancer</span> web y móvil",
+    "hero-title": "<span class=\"text-gradient\">Freelancer</span> web y móvil",
     "hero-description": "Creación de sistemas corporativos y aplicaciones móviles de alto rendimiento enfocados en la escalabilidad.<br>Ofrezco consultoría en arquitectura web, modernización de portales heredados y desarrollo de Design Systems.",
     "hero-cta-about": "Sobre mí",
     "hero-cta-contact": "Ponte en contacto",
