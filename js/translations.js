@@ -49,7 +49,7 @@ const translations = {
     "project-f1-mobile-alt": "Visualização Mobile do F1 Palpites",
     "project-dani-title": "DANi",
     "project-dani-desc": "O <strong>DANi</strong> é um assistente inteligente de tarefas pessoais integrado diretamente ao WhatsApp. Utilizando o poder de inteligência artificial generativa (LLMs) e processamento de linguagem natural, o bot permite criar, listar e gerenciar lembretes e tarefas por texto ou áudio. O sistema conta com notificações de lembretes automáticos e integração com meios de pagamento para assinaturas premium, liberando recursos avançados como processamento inteligente de imagens e tarefas ilimitadas.",
-    "project-dani-cta": "Acessar Repositório",
+    "project-dani-cta": "Acessar Site (em breve)",
     "project-dani-desktop-alt": "Visualização da Logo e Banner do DANi",
     "project-dani-mobile-alt": "Visualização do Chat do DANi no WhatsApp",
     
@@ -174,7 +174,7 @@ const translations = {
     "project-f1-mobile-alt": "F1 Palpites Mobile View",
     "project-dani-title": "DANi",
     "project-dani-desc": "<strong>DANi</strong> is an intelligent personal task assistant integrated directly into WhatsApp. Powered by generative artificial intelligence (LLMs) and natural language processing, the bot allows users to create, list, and manage reminders and tasks via text or audio. The system features automatic reminder notifications and payment integration for premium subscriptions, unlocking advanced features like smart image processing and unlimited tasks.",
-    "project-dani-cta": "Access Repository",
+    "project-dani-cta": "Access Site (coming soon)",
     "project-dani-desktop-alt": "DANi Logo and Banner View",
     "project-dani-mobile-alt": "DANi WhatsApp Chat View",
     
@@ -299,7 +299,7 @@ const translations = {
     "project-f1-mobile-alt": "F1 Palpites Vista Móvil",
     "project-dani-title": "DANi",
     "project-dani-desc": "<strong>DANi</strong> es un asistente inteligente de tareas personales integrado directamente en WhatsApp. Impulsado por inteligencia artificial generativa (LLMs) y procesamiento de lenguaje natural, el bot permite crear, listar y gestionar recordatorios y tareas a través de texto o audio. El sistema cuenta con notificaciones automáticas de recordatorios e integración con medios de pago para suscripciones premium, liberando funciones avanzadas como el procesamiento inteligente de imágenes y tareas ilimitadas.",
-    "project-dani-cta": "Ver Repositorio",
+    "project-dani-cta": "Acceder al Sitio (próximamente)",
     "project-dani-desktop-alt": "Logotipo y Banner de DANi",
     "project-dani-mobile-alt": "Chat de DANi en WhatsApp",
     
