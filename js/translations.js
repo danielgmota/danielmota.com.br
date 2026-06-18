@@ -125,7 +125,10 @@ const translations = {
     "contact-email-desc": "Contato corporativo direto",
     
     // footer
-    "footer-copy": "© 2026 Daniel Mota. Desenvolvido com foco em performance e modernidade."
+    "footer-copy": "© 2026 Daniel Mota. Desenvolvido com foco em performance e modernidade.",
+
+    // project zoom modal
+    "modal-close-aria-label": "Fechar visualização de imagem"
   },
   en: {
     // metadata
@@ -250,7 +253,10 @@ const translations = {
     "contact-email-desc": "Direct corporate contact",
     
     // footer
-    "footer-copy": "© 2026 Daniel Mota. Developed with a focus on performance and modernity."
+    "footer-copy": "© 2026 Daniel Mota. Developed with a focus on performance and modernity.",
+
+    // project zoom modal
+    "modal-close-aria-label": "Close image preview"
   },
   es: {
     // metadata
@@ -375,6 +381,9 @@ const translations = {
     "contact-email-desc": "Contacto corporativo directo",
     
     // footer
-    "footer-copy": "© 2026 Daniel Mota. Desarrollado con enfoque en rendimiento y modernidad."
+    "footer-copy": "© 2026 Daniel Mota. Desarrollado con enfoque en rendimiento y modernidad.",
+
+    // project zoom modal
+    "modal-close-aria-label": "Cerrar vista de imagen"
   }
 };

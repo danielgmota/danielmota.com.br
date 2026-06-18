@@ -210,3 +210,198 @@
     top: 18px;
   }
 }
+
+/* Zoom Modal Dialog Styles */
+.zoom-dialog {
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  outline: none;
+  overflow: hidden;
+  display: none; /* Fallback for browsers without dialog support */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  inset: 0;
+  box-sizing: border-box;
+  
+  /* Transitions for entry/exit */
+  opacity: 0;
+  transition-property: opacity, display, overlay;
+  transition-duration: 0.4s;
+  transition-timing-function: var(--ease-out-expo);
+  transition-behavior: allow-discrete;
+}
+
+.zoom-dialog[open] {
+  opacity: 1;
+  display: flex;
+
+  @starting-style {
+    opacity: 0;
+  }
+}
+
+.zoom-dialog::backdrop {
+  background-color: rgba(3, 3, 3, 0);
+  backdrop-filter: blur(0px);
+  transition:
+    display 0.4s allow-discrete,
+    overlay 0.4s allow-discrete,
+    background-color 0.4s var(--ease-out-expo),
+    backdrop-filter 0.4s var(--ease-out-expo);
+}
+
+.zoom-dialog[open]::backdrop {
+  background-color: rgba(3, 3, 3, 0.85);
+  backdrop-filter: blur(12px);
+
+  @starting-style {
+    background-color: rgba(3, 3, 3, 0);
+    backdrop-filter: blur(0px);
+  }
+}
+
+/* Respect user preference for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .zoom-dialog {
+    transition-duration: 0.15s;
+  }
+  .zoom-dialog-content {
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
+.zoom-dialog-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 90vw;
+  max-height: 90vh;
+  
+  /* Scale transition on the content container */
+  transform: scale(0.95);
+  transition: transform 0.4s var(--ease-out-expo);
+}
+
+.zoom-dialog[open] .zoom-dialog-content {
+  transform: scale(1);
+
+  @starting-style {
+    transform: scale(0.95);
+  }
+}
+
+.zoom-image {
+  max-width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 
+    0 25px 50px -12px rgba(0, 0, 0, 0.8),
+    0 0 40px rgba(0, 212, 255, 0.15);
+  border: 1px solid var(--border-subtle);
+  background: var(--bg-secondary);
+}
+
+.zoom-close-btn {
+  position: absolute;
+  top: -24px;
+  right: -24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(18, 12, 30, 0.7);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s var(--ease-out-expo);
+  backdrop-filter: blur(10px);
+}
+
+.zoom-close-btn:hover {
+  background: rgba(37, 99, 235, 0.8);
+  border-color: var(--accent-neon);
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 212, 255, 0.3);
+}
+
+@media (max-width: 576px) {
+  .zoom-close-btn {
+    top: 12px;
+    right: 12px;
+    background: rgba(18, 12, 30, 0.85);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.zoom-caption {
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: rgba(18, 18, 30, 0.6);
+  border: 1px solid var(--border-subtle);
+  backdrop-filter: blur(12px);
+  border-radius: 9999px;
+  color: var(--text-secondary);
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  text-align: center;
+  max-width: 90%;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+  animation: fadeInZoomCaption 0.4s var(--ease-out-expo) forwards;
+}
+
+@keyframes fadeInZoomCaption {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Hover effects for project mockups */
+.desktop-mockup,
+.phone-mockup {
+  transition: transform 0.4s var(--ease-out-expo), box-shadow 0.4s var(--ease-out-expo) !important;
+}
+
+.desktop-mockup img,
+.phone-mockup img {
+  cursor: zoom-in;
+  transition: transform 0.4s var(--ease-out-expo), filter 0.4s var(--ease-out-expo);
+}
+
+.desktop-mockup:hover {
+  transform: translateY(-4px) scale(1.01) !important;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.8) !important;
+  z-index: 5 !important; /* Bring to front on hover */
+}
+
+.phone-mockup:hover {
+  transform: translateY(-8px) scale(1.03) !important;
+  box-shadow: 
+    0 30px 60px -10px rgba(0, 0, 0, 0.9),
+    0 0 25px rgba(37, 99, 235, 0.25) !important;
+  z-index: 6 !important; /* Bring to front on hover */
+}
+
+.desktop-mockup:hover img,
+.phone-mockup:hover img {
+  filter: brightness(1.08);
+}
+
