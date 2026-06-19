@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANi - Instruções para Exclusão de Dados</title>
+    <meta name="description" content="Saiba como solicitar a exclusão definitiva de seus dados e histórico de tarefas no DANi de forma simples e segura.">
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --card-bg: rgba(17, 24, 39, 0.7);
+            --border-color: rgba(255, 255, 255, 0.08);
+            --text-primary: #f3f4f6;
+            --text-secondary: #9ca3af;
+            --accent-primary: #00f2fe;
+            --accent-secondary: #4facfe;
+            --accent-glow: rgba(0, 242, 254, 0.15);
+            --danger-color: #ef4444;
+            --danger-glow: rgba(239, 68, 68, 0.15);
+            --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(circle at 10% 20%, rgba(79, 172, 254, 0.05) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(0, 242, 254, 0.05) 0%, transparent 40%);
+            color: var(--text-primary);
+            line-height: 1.6;
+            padding: 40px 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--accent-secondary);
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .logo-container {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 70px;
+            height: 70px;
+            border-radius: 20px;
+            background: linear-gradient(135deg, var(--danger-color) 0%, #b91c1c 100%);
+            margin-bottom: 16px;
+            box-shadow: 0 8px 24px var(--danger-glow);
+            position: relative;
+        }
+
+        .logo-text {
+            font-size: 28px;
+            font-weight: 800;
+            color: #ffffff;
+            letter-spacing: -0.5px;
+        }
+
+        h1 {
+            font-size: 32px;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff 30%, #fca5a5 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .last-update {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            padding: 40px;
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+            margin-bottom: 30px;
+        }
+
+        section {
+            margin-bottom: 32px;
+        }
+
+        section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            letter-spacing: -0.3px;
+        }
+
+        h2::before {
+            content: "";
+            display: inline-block;
+            width: 4px;
+            height: 20px;
+            border-radius: 2px;
+            background: var(--danger-color);
+        }
+
+        p {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .step-list {
+            margin-bottom: 24px;
+            padding-left: 0;
+            list-style: none;
+        }
+
+        .step-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            position: relative;
+            padding-left: 60px;
+        }
+
+        .step-number {
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid var(--danger-color);
+            color: var(--danger-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .step-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #ffffff;
+            margin-bottom: 8px;
+        }
+
+        .step-desc {
+            color: var(--text-secondary);
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        .alert-box {
+            background: rgba(239, 68, 68, 0.03);
+            border-left: 3px solid var(--danger-color);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 24px;
+        }
+
+        .alert-box p {
+            margin-bottom: 0;
+            color: #fca5a5;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        a {
+            color: var(--accent-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s ease, text-shadow 0.2s ease;
+        }
+
+        a:hover {
+            color: var(--accent-secondary);
+            text-shadow: 0 0 8px rgba(0, 242, 254, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer-link {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        .footer-link:hover {
+            color: var(--text-primary);
+        }
+
+        .badge {
+            background: rgba(239, 68, 68, 0.1);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 12px;
+            color: var(--danger-color);
+            border: 1px solid rgba(239, 68, 68, 0.2);
+            display: inline-block;
+            margin-top: 8px;
+        }
+
+        /* Responsive adaptation */
+        @media (max-width: 640px) {
+            body {
+                padding: 20px 16px;
+            }
+
+            .card {
+                padding: 24px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <span class="logo-text">D</span>
+            </div>
+            <h1 id="deletion-title">Exclusão de Dados</h1>
+            <div class="last-update">Última atualização: 19 de Junho de 2026</div>
+            <div class="badge">Conformidade com a LGPD e Meta API</div>
+        </header>
+
+        <div class="card">
+            <section>
+                <h2>Instruções para Exclusão de Conta e Dados</h2>
+                <p>No <strong>DANi</strong>, garantimos a você o controle total sobre suas informações de acordo com a Lei Geral de Proteção de Dados (LGPD). Se você deseja parar de utilizar nosso assistente de tarefas e excluir de forma permanente e irrecuperável todas as suas informações do nosso banco de dados, siga as instruções abaixo.</p>
+            </section>
+
+            <section>
+                <h2>Como solicitar a exclusão</h2>
+                <p>Você pode solicitar a exclusão imediata de seus dados por meio de duas formas oficiais:</p>
+
+                <div class="step-list">
+                    <div class="step-item">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Via E-mail Oficial (Recomendado)</div>
+                        <div class="step-desc">
+                            Envie uma solicitação para o e-mail do nosso encarregado de proteção de dados: 
+                            <a href="mailto:guimaraes15@gmail.com"><strong>guimaraes15@gmail.com</strong></a> com o assunto "Exclusão de Dados - DANi" informando o número de telefone de cadastro no formato internacional (exemplo: 5511999999999).
+                        </div>
+                    </div>
+
+                    <div class="step-item">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Diretamente no WhatsApp</div>
+                        <div class="step-desc">
+                            Envie uma mensagem na conversa do DANi solicitando a exclusão de sua conta (ex: <i>"Gostaria de deletar a minha conta e todas as minhas tarefas do sistema"</i>). A nossa equipe ou o DPO processará o pedido manualmente.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2>O que acontece após a solicitação?</h2>
+                <p>Assim que recebermos a sua solicitação, nosso time fará o processamento em até <strong>48 horas úteis</strong>. Após a conclusão, as seguintes informações serão deletadas definitivamente do nosso banco de dados no Supabase:</p>
+                <ul>
+                    <li>Seu número de telefone de cadastro e nome de exibição.</li>
+                    <li>Todo o histórico de tarefas criadas, concluídas e pendentes.</li>
+                    <li>Todos os agendamentos e lembretes ativos configurados para disparo.</li>
+                    <li>Quaisquer registros temporários de arquivos de áudio, textos ou imagens interpretadas.</li>
+                </ul>
+                <div class="alert-box">
+                    <p>⚠️ <strong>Atenção:</strong> Este processo é irreversível. Uma vez excluídos os dados, não será possível recuperar o seu histórico de tarefas ou configurações caso decida utilizar o DANi novamente no futuro.</p>
+                </div>
+            </section>
+
+            <section>
+                <h2>Confirmação</h2>
+                <p>Após a exclusão completa e segura dos dados de nosso sistema, você receberá um e-mail ou uma notificação de confirmação atestando que os dados foram integralmente purgados.</p>
+            </section>
+        </div>
+
+        <footer>
+            <a class="footer-link" id="nav-privacy" href="privacy-policy.html">Política de Privacidade</a>
+            <a class="footer-link" id="nav-terms" href="terms-of-use.html">Termos de Uso</a>
+        </footer>
+    </div>
+
+</body>
+</html>
