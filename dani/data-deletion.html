@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DANi - Instruções para Exclusão de Dados</title>
-    <meta name="description" content="Saiba como solicitar a exclusão definitiva de seus dados e histórico de tarefas no DANi de forma simples e segura.">
+    <meta name="description" content="Saiba como solicitar a exclusão definitiva de seus dados e histórico de tarefas no DANi de forma simples, automática e segura diretamente pelo WhatsApp.">
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -199,6 +199,21 @@
             margin-bottom: 0;
         }
 
+        .confirmation-phrase {
+            display: inline-block;
+            background: rgba(239, 68, 68, 0.08);
+            border: 1px solid rgba(239, 68, 68, 0.25);
+            border-radius: 8px;
+            padding: 6px 14px;
+            margin-top: 10px;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 15px;
+            font-weight: 700;
+            color: #fca5a5;
+            letter-spacing: 0.3px;
+            user-select: all;
+        }
+
         .alert-box {
             background: rgba(239, 68, 68, 0.03);
             border-left: 3px solid var(--danger-color);
@@ -212,6 +227,28 @@
             color: #fca5a5;
             font-weight: 500;
             font-size: 14px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 16px;
+        }
+
+        ul li {
+            color: var(--text-secondary);
+            font-size: 14px;
+            padding: 6px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        ul li::before {
+            content: "•";
+            color: var(--danger-color);
+            font-weight: 700;
+            position: absolute;
+            left: 4px;
         }
 
         a {
@@ -258,6 +295,21 @@
             margin-top: 8px;
         }
 
+        .info-box {
+            background: rgba(0, 242, 254, 0.03);
+            border-left: 3px solid var(--accent-primary);
+            padding: 16px 20px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 24px;
+        }
+
+        .info-box p {
+            margin-bottom: 0;
+            color: var(--accent-primary);
+            font-weight: 500;
+            font-size: 14px;
+        }
+
         /* Responsive adaptation */
         @media (max-width: 640px) {
             body {
@@ -292,51 +344,66 @@
 
         <div class="card">
             <section>
-                <h2>Instruções para Exclusão de Conta e Dados</h2>
-                <p>No <strong>DANi</strong>, garantimos a você o controle total sobre suas informações de acordo com a Lei Geral de Proteção de Dados (LGPD). Se você deseja parar de utilizar nosso assistente de tarefas e excluir de forma permanente e irrecuperável todas as suas informações do nosso banco de dados, siga as instruções abaixo.</p>
+                <h2>Exclusão Automática pelo WhatsApp</h2>
+                <p>No <strong>DANi</strong>, garantimos a você o controle total sobre suas informações de acordo com a Lei Geral de Proteção de Dados (LGPD). A exclusão de conta e dados é feita de forma <strong>automática, instantânea e segura</strong> diretamente pela conversa do WhatsApp — sem necessidade de e-mails ou espera.</p>
             </section>
 
             <section>
-                <h2>Como solicitar a exclusão</h2>
-                <p>Você pode solicitar a exclusão imediata de seus dados por meio de duas formas oficiais:</p>
+                <h2>Como excluir seus dados</h2>
+                <p>Siga os passos abaixo para solicitar a exclusão imediata e permanente de todos os seus dados:</p>
 
                 <div class="step-list">
                     <div class="step-item">
                         <div class="step-number">1</div>
-                        <div class="step-title">Via E-mail Oficial (Recomendado)</div>
+                        <div class="step-title">Solicite a exclusão na conversa</div>
                         <div class="step-desc">
-                            Envie uma solicitação para o e-mail do nosso encarregado de proteção de dados: 
-                            <a href="mailto:guimaraes15@gmail.com"><strong>guimaraes15@gmail.com</strong></a> com o assunto "Exclusão de Dados - DANi" informando o número de telefone de cadastro no formato internacional (exemplo: 5511999999999).
+                            Envie uma mensagem na conversa do DANi no WhatsApp solicitando a exclusão da sua conta. Exemplos: <em>"quero excluir minha conta"</em>, <em>"apague meus dados"</em> ou <em>"deletar meu cadastro"</em>.
                         </div>
                     </div>
 
                     <div class="step-item">
                         <div class="step-number">2</div>
-                        <div class="step-title">Diretamente no WhatsApp</div>
+                        <div class="step-title">Leia o aviso de confirmação</div>
                         <div class="step-desc">
-                            Envie uma mensagem na conversa do DANi solicitando a exclusão de sua conta (ex: <i>"Gostaria de deletar a minha conta e todas as minhas tarefas do sistema"</i>). A nossa equipe ou o DPO processará o pedido manualmente.
+                            O DANi irá informar exatamente o que será apagado (perfil, tarefas e histórico de conversas) e pedirá sua confirmação explícita antes de prosseguir.
                         </div>
                     </div>
+
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Confirme digitando a frase exata</div>
+                        <div class="step-desc">
+                            Para confirmar a exclusão definitiva, digite exatamente a frase abaixo na conversa:
+                            <br>
+                            <span class="confirmation-phrase">excluir todos os meus dados</span>
+                            <br><br>
+                            Qualquer outra resposta cancelará automaticamente o processo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="info-box">
+                    <p>⚡ O processo é instantâneo. Seus dados serão apagados imediatamente após a confirmação, sem necessidade de intervenção humana ou tempo de espera.</p>
                 </div>
             </section>
 
             <section>
-                <h2>O que acontece após a solicitação?</h2>
-                <p>Assim que recebermos a sua solicitação, nosso time fará o processamento em até <strong>48 horas úteis</strong>. Após a conclusão, as seguintes informações serão deletadas definitivamente do nosso banco de dados no Supabase:</p>
+                <h2>O que será excluído?</h2>
+                <p>Após a confirmação, as seguintes informações serão deletadas <strong>permanentemente</strong> do nosso banco de dados:</p>
                 <ul>
                     <li>Seu número de telefone de cadastro e nome de exibição.</li>
                     <li>Todo o histórico de tarefas criadas, concluídas e pendentes.</li>
                     <li>Todos os agendamentos e lembretes ativos configurados para disparo.</li>
-                    <li>Quaisquer registros temporários de arquivos de áudio, textos ou imagens interpretadas.</li>
+                    <li>Todo o histórico de conversas com o assistente.</li>
                 </ul>
                 <div class="alert-box">
-                    <p>⚠️ <strong>Atenção:</strong> Este processo é irreversível. Uma vez excluídos os dados, não será possível recuperar o seu histórico de tarefas ou configurações caso decida utilizar o DANi novamente no futuro.</p>
+                    <p>⚠️ <strong>Atenção:</strong> Este processo é irreversível. Uma vez excluídos os dados, não será possível recuperar o seu histórico de tarefas ou configurações. Caso deseje utilizar o DANi novamente no futuro, será necessário realizar um novo cadastro.</p>
                 </div>
             </section>
 
             <section>
                 <h2>Confirmação</h2>
-                <p>Após a exclusão completa e segura dos dados de nosso sistema, você receberá um e-mail ou uma notificação de confirmação atestando que os dados foram integralmente purgados.</p>
+                <p>Após a exclusão completa dos dados, o DANi enviará automaticamente uma mensagem de confirmação no WhatsApp informando que todos os seus dados foram apagados com sucesso do sistema.</p>
             </section>
         </div>
 
