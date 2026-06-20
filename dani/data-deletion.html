@@ -78,17 +78,17 @@
             width: 70px;
             height: 70px;
             border-radius: 20px;
-            background: linear-gradient(135deg, var(--danger-color) 0%, #b91c1c 100%);
+            background: #ffffff;
             margin-bottom: 16px;
-            box-shadow: 0 8px 24px var(--danger-glow);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
             position: relative;
+            padding: 6px;
         }
 
-        .logo-text {
-            font-size: 28px;
-            font-weight: 800;
-            color: #ffffff;
-            letter-spacing: -0.5px;
+        .logo-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         h1 {
@@ -335,7 +335,7 @@
     <div class="container">
         <header>
             <div class="logo-container">
-                <span class="logo-text">D</span>
+                <img src="assets/dani.png" alt="DANi Logo" class="logo-image">
             </div>
             <h1 id="deletion-title">Exclusão de Dados</h1>
             <div class="last-update">Última atualização: 19 de Junho de 2026</div>
