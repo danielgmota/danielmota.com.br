@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANi - Termos de Uso</title>
+    <meta name="description" content="Termos de Uso do DANi - Seu assistente pessoal de tarefas no WhatsApp. Conheça as regras de utilização, planos e responsabilidades do serviço.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background-color: #0b0f19;
+            font-family: 'Outfit', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        }
+
+        /* Fullscreen iframe */
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+            display: block;
+            background: transparent;
+        }
+
+        /* Hidden heading for SEO */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
+
+        /* Elegant loading screen */
+        #loader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #0b0f19 0%, #111827 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s;
+            color: #ffffff;
+        }
+
+        .loader-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 24px;
+        }
+
+        /* Glassmorphic card for loader */
+        .loader-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            padding: 48px 64px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Animated gradient text */
+        .loader-title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            letter-spacing: -0.02em;
+            margin: 0 0 8px 0;
+            background: linear-gradient(135deg, #00d2ff 0%, #0072ff 50%, #7f00ff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .loader-subtitle {
+            font-size: 1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.6);
+            margin: 0;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+        }
+
+        /* Premium spinner */
+        .spinner-box {
+            position: relative;
+            width: 64px;
+            height: 64px;
+            margin-top: 16px;
+        }
+
+        .spinner-outer {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 3px solid transparent;
+            border-top-color: #00d2ff;
+            border-bottom-color: #7f00ff;
+            border-radius: 50%;
+            animation: spin 1.5s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+        }
+
+        .spinner-inner {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            border: 3px solid transparent;
+            border-left-color: #0072ff;
+            border-right-color: #0072ff;
+            border-radius: 50%;
+            animation: spin-reverse 1s linear infinite;
+        }
+
+        /* Animations */
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin-reverse {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        /* Class to hide loader */
+        #loader.loaded {
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="sr-only">DANi - Termos de Uso</h1>
+
+    <!-- Premium Loader Overlay -->
+    <div id="loader" role="status" aria-live="polite">
+        <div class="loader-content">
+            <div class="loader-card">
+                <div class="loader-title">DANi</div>
+                <div class="loader-subtitle">Termos de Uso</div>
+                <div class="spinner-box">
+                    <div class="spinner-outer"></div>
+                    <div class="spinner-inner"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Fullscreen Iframe -->
+    <iframe id="termos-iframe" src="https://dani-olive.vercel.app/termos" title="DANi - Termos de Uso" allow="fullscreen"></iframe>
+
+    <script>
+        // Once the iframe is fully loaded, hide the loader screen with a beautiful transition
+        const iframe = document.getElementById('termos-iframe');
+        const loader = document.getElementById('loader');
+
+        if (iframe) {
+            iframe.addEventListener('load', () => {
+                // Keep the loader visible for a tiny bit extra to make transition feel smooth and intentional
+                setTimeout(() => {
+                    loader.classList.add('loaded');
+                }, 300);
+            });
+
+            // Safety timeout: if it takes too long to trigger load event, fade out anyway
+            setTimeout(() => {
+                if (!loader.classList.contains('loaded')) {
+                    loader.classList.add('loaded');
+                }
+            }, 5000);
+        }
+    </script>
+</body>
+
+</html>
